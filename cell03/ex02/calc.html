@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>It's over 9000</title>
+</head>
+<body>
+    <input type="text" id="left">
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="text" id="right">
+    <input type="submit" value="Try me!" onclick="calculate()">
+
+    <script>
+        function calculate() {
+    const leftVal = document.getElementById('left').value;
+    const rightVal = document.getElementById('right').value;
+    const op = document.getElementById('operator').value;
+
+    if (!isPositiveInteger(leftVal) || !isPositiveInteger(rightVal)) {
+        alert('Error :(');
+        return;
+    }
+
+    const n1 = parseInt(leftVal);
+    const n2 = parseInt(rightVal);
+    let result;
+
+    if ((op === '/' || op === '%') && n2 === 0) {
+        const msg = "It's over 9000!";
+        console.log(msg);
+        alert(msg);
+        return;
+    }
+
+    if (op === '+') result = n1 + n2;
+    else if (op === '-') result = n1 - n2;
+    else if (op === '*') result = n1 * n2;
+    else if (op === '/') result = n1 / n2;
+    else if (op === '%') result = n1 % n2;
+
+    console.log(result);
+    alert(result);
+}
+
+function isPositiveInteger(str) {
+    const n = Math.floor(Number(str));
+    return n !== Infinity && String(n) === str && n >= 0;
+}
+
+setInterval(function() {
+    alert('Please, use me...');
+}, 30000);
+    </script>
+</body>
+</html>

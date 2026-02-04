@@ -1,0 +1,40 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+table {
+    width: 100%;
+    height: 100vh;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.cell-1 {
+    background-color: #C2D184;
+}
+
+.cell-2 {
+    background-color: #F8C3AF;
+}
+
+@media screen and (max-width: 600px) {
+    tr {
+        display: flex;
+        flex-direction: column; 
+        height: 100vh;
+    }
+    
+    td {
+        width: 100% ; 
+        height: 50% ; 
+    }
+}

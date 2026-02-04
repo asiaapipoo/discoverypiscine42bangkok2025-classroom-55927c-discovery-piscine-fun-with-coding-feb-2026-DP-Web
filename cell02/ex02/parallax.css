@@ -1,0 +1,39 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img1 { background-image: url('https://c.ndtvimg.com/2026-01/qnli4v1_trump-maduro-meme_625x300_07_January_26.jpeg'); }
+.img2 { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzcgpKZh2EMHAuwQe5iVkOzbVN8-wkzylRYA&s'); }
+
+.caption {
+    text-align: center;
+}
+
+.caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.content-block {
+    color: #ddd;
+    background-color: #282E34; 
+    text-align: center;
+    padding: 50px 80px;
+}
